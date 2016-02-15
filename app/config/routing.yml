@@ -1,0 +1,11 @@
+carnetadress:
+    resource: "@CarnetadressBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+carnetadress:
+    pattern: /
+    defaults: { _controller: CarnetadressBundle:Default:index }

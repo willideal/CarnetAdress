@@ -1,0 +1,12 @@
+
+<h1>Ajouter un contact</h1>
+
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+
+<form action="" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <input type="submit" />
+</form>
+<p><a href="{{ path('carnet_adress_lister') }}">Retour à la liste des Contacts</a></p>

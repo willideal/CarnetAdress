@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <title>{% block title %}Carnet d'Adresse{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div id="page">
+            <div id="header">
+		<ul id="menu">
+		    <li><a href="{{ path('carnetadress_homepage') }}">Accueil</a></li>
+		    <li><a href="{{ path('carnet_adress_lister') }}">Mon Carnet d'adresse</a></li>
+		                       
+		</ul>
+            </div>
+
+            <div id="content">
+                <h1>{{ block('title') }}</h1>
+                {% block content %}
+                {% endblock %}
+                <p>{{ message }}</p>
+                <p><a href="{{ path('carnet_adress_lister') }}">Aller à la liste vos Contacts</a></p>
+            </div>
+            <div id="footer">
+                <p>Tous droits réservés © 2016</p>
+            </div>
+        </div>
+    </body>
+</html>

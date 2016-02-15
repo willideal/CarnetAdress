@@ -1,0 +1,26 @@
+
+
+<p>Bienvenue sur mon Carnet d'adresse</p>
+
+<h1>Liste des Contact</h1>
+
+<table>
+{% for c in carnet_adress %}
+	<tr>
+		<td>{{ c.nom }}</td>
+		<td>{{ c.adresse }}</td>
+		<td>{{ c.telephone}}</td>
+		<td>{{ c.siteweb }}</td>
+		<td><a href="{{ path('carnet_adress_modifier', { 'id': c.id }) }}">Modifier</a></td>
+		<td><a href="{{ path('carnet_adress_supprimer', { 'id': c.id }) }}">Supprimer</a></td>
+	</tr>
+{% else %}
+	<tr><td>Aucun contact n'a été trouvé.</td></tr>
+{% endfor %}
+<td></td>
+<td><a href="{{ path('carnet_adress_ajouter') }}">Ajouter un contact</a></td>
+<td></td>
+<td><a href="{{ path('carnetadress_homepage') }}"> Revenir à lacceuil</a></td>
+</table>
+
+

@@ -1,0 +1,18 @@
+carnetadress_homepage:
+    path:     /
+    defaults: { _controller: CarnetadressBundle:Default:index }
+
+carnet_adress_lister:
+    path: /carnet_adress/
+    defaults: { _controller: CarnetadressBundle:CarnetAdress:lister }
+carnet_adress_ajouter:
+    path: /carnet_adress/ajouter
+    defaults: { _controller: CarnetadressBundle:CarnetAdress:editer }
+carnet_adress_modifier:
+    path: /carnet_adress/modifier/{id}
+    defaults: { _controller: CarnetadressBundle:CarnetAdress:editer }
+carnet_adress_supprimer:
+    path: /carnet_adress/supprimer/{id}
+    defaults: { _controller: CarnetadressBundle:CarnetAdress:supprimer }
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
