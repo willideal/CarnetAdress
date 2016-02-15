@@ -8,7 +8,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-      $message = 'Bienvenue sur mon Carnet d\'adresse personnel';
+      $message = 'Bienvenue sur mon carnet d\'adresse';
 
   		return $this->container->get('templating')->renderResponse('CarnetadressBundle:Default:index.html.twig',
     	array('message' => $message)
