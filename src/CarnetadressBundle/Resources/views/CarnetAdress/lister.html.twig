@@ -18,7 +18,9 @@
 	<tr><td>Aucun contact n'a été trouvé.</td></tr>
 {% endfor %}
 <td></td>
-<td><a href="{{ path('carnet_adress_ajouter') }}">Ajouter un contact</a></td>
+<td>{% if is_granted('ROLE_ADMIN') %}
+	<p><a href="{{ path('carnet_adress_ajouter') }}">Ajouter un contact</a><p>
+{% endif %}</td>
 <td></td>
 <td><a href="{{ path('carnetadress_homepage') }}"> Revenir à lacceuil</a></td>
 </table>
